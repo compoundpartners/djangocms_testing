@@ -1,0 +1,14 @@
+---
+- script:
+    source: tests/includes/locations.yaml
+    overwrite: True
+    dont_check_url: True
+- script:
+    source: tests/includes/services.yaml
+    overwrite: True
+- script:
+    source: tests/includes/people.yaml
+    overwrite: True
+- script:
+    source: tests/includes/events.yaml
+    overwrite: True

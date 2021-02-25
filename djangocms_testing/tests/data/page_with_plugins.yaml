@@ -1,0 +1,59 @@
+---
+title: Plugins Test Page
+publish: true
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+
+    - RelatedPeoplePlugin:
+        title: Test Group
+        number_of_people: 3
+        related_groups:
+            $groups: [test-group]
+
+    - TextPlugin:
+        body: $loremipsum
+
+    - RelatedPeoplePlugin:
+        title: Some Test People
+        number_of_people: 3
+        related_people:
+            $people: [john-smith, joe-joe]
+
+    - RelatedSpeakersPlugin:
+        title: Speackers
+        number_of_people: 3
+        speakers:
+            $speakers: [john-doe, john-smith]
+
+    - EventRelatedPlugin:
+        title: Related Events
+        number_of_items: 3
+        related_types:
+            $event_sections: [test-events]
+        related_services:
+            $services: [test-service]
+
+    - EventRelatedPlugin:
+        title: Related Events 2
+        number_of_items: 3
+        related_types:
+            $event_sections: [test-events]
+        related_hosts:
+            $people: [john-doe, joe-joe, john-smith]
+
+    - NewsBlogJSRelatedPlugin:
+        title: Related Articles
+        number_of_articles: 3
+        related_types:
+            $article_sections: [test-articles]
+        related_authors:
+            $people: [john-doe, joe-joe, john-smith]
+
+    - NewsBlogJSRelatedPlugin:
+        title: Related Articles 2
+        number_of_articles: 3
+        related_services:
+            $services: [test-service]

@@ -1,0 +1,10 @@
+---
+- company:
+    source: tests/data/company.yaml
+    data: [[name, First test company ]]
+- company:
+    source: tests/data/company.yaml
+    data: [[name, Second test company ]]
+- company:
+    source: tests/data/company.yaml
+    data: [[name, Last test company]]

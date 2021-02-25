@@ -1,0 +1,39 @@
+---
+title: Test Event
+app_config: test-events
+services: [test-service, second-test-service, last-test-service]
+locations: [test-location]
+host: john-doe
+is_published: true
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+    - RelatedSpeakersPlugin:
+        title: Speackers
+        number_of_people: 3
+        speakers:
+            $speakers: [john-doe, joe-joe, john-smith]
+    - EventRelatedPlugin:
+        title: Related
+        number_of_items: 3
+        related_types:
+            $event_sections: [test-events]
+        related_services:
+            $services: [test-service]
+    - EventRelatedPlugin:
+        title: Related
+        number_of_items: 3
+        related_types:
+            $event_sections: [test-events]
+        related_hosts:
+            $people: [john-doe, joe-joe, john-smith]
+
+
+  sidebar:
+    - TextPlugin:
+        body: $loremipsum
+  registration_content:
+    - TextPlugin:
+        body: $loremipsum

@@ -1,0 +1,25 @@
+---
+- script:
+    source: tests/includes/locations.yaml
+    dont_check_url: True
+- script:
+    source: tests/includes/services.yaml
+- script:
+    source: tests/includes/people.yaml
+- script:
+    source: tests/includes/articles.yaml
+- script:
+    source: tests/includes/events.yaml
+- script:
+    source: tests/includes/companies.yaml
+- page:
+    source: tests/data/page.yaml
+    dont_check_url: True
+- page:
+    source: tests/data/page.yaml
+    data: [[slug, test2]]
+- page:
+    source: tests/data/page.yaml
+    data: [[slug, test33]]
+- page:
+    source: tests/data/page_with_plugins.yaml

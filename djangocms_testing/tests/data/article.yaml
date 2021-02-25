@@ -1,0 +1,18 @@
+---
+title: Test Article
+app_config: test-articles
+services: [test-service, second-test-service, last-test-service]
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+  related_articles:
+    - TextPlugin:
+        body: $loremipsum
+  article_carousel:
+    - TextPlugin:
+        body: $loremipsum
+  article_sidebar:
+    - TextPlugin:
+        body: $loremipsum

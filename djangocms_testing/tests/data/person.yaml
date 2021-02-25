@@ -1,0 +1,17 @@
+---
+name: John Doe
+groups: [test-group, second-test-group]
+services: [test-service, second-test-service, last-test-service]
+location: test-location
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+  placeholder_sidebar:
+    - TextPlugin:
+        body: $loremipsum
+  banner:
+    - TextPlugin:
+        body: $loremipsum
+

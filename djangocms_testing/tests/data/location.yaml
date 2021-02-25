@@ -1,0 +1,17 @@
+---
+name: Test location
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+  sidebar:
+    - TextPlugin:
+        body: $loremipsum
+  banner:
+    - TextPlugin:
+        body: $loremipsum
+  related:
+    - TextPlugin:
+        body: $loremipsum
+

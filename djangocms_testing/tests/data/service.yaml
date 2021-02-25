@@ -1,0 +1,20 @@
+---
+title: Test Service
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+
+  sidebar:
+    - TextPlugin:
+        body: $loremipsum
+
+  related_articles_placeholder:
+    - TextPlugin:
+        body: $loremipsum
+
+  banner:
+    - TextPlugin:
+        body: $loremipsum
+

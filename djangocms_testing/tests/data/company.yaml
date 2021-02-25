@@ -1,0 +1,8 @@
+---
+articles: [test-article, second-test-article, test-article-in-test-section]
+events: [test-event, second-test-event, last-test-event]
+people: [john-doe, joe-joe, john-smith]
+services: [test-service, second-test-service, last-test-service]
+
+
+

@@ -1,0 +1,122 @@
+#---
+#- service_section:
+    #data: [[app_title, Test services]]
+#- service_section:
+    #data: [[app_title, Second test services]]
+#- page:
+    #data: [[title, Test services], [apphook, ServicesApp], [apphook_namespace, test-services]]
+#- page:
+    #data: [[title, Second test services], [apphook, ServicesApp], [apphook_namespace, second-test-services]]
+#- service:
+    #source: tests/data/service.yaml
+    #data: [[title, Test service], [sections, [test-services, second-test-services]]]
+#- service:
+    #source: tests/data/service.yaml
+    #data: [[title, Second test service], [sections, [test-services]]]
+#- service:
+    #source: tests/data/service.yaml
+    #data: [[title, Last test service], [sections, [second-test-services]]]
+
+#- group:
+    #data: [[name, Test group]]
+#- group:
+    #data: [[name, Second test group]]
+#- person:
+    #source: tests/data/person.yaml
+#- person:
+    #source: tests/data/person.yaml
+    #data: [[name, Joe], [groups, [second-test-group]], [services, [test-service, second-test-service]]]
+#- person:
+    #source: tests/data/person.yaml
+    #data: [[name, John Smith], [groups, [test-group]], [services, [last-test-service]]]
+
+- article_section:
+    data: [[app_title, Test articles]]
+- page:
+    data: [[title, Test articles], [apphook, NewsBlogApp], [apphook_namespace, test-articles]]
+- article:
+    source: tests/data/article.yaml
+- article:
+    source: tests/data/article.yaml
+    data: [[title, Second test article ], [app_config, test-articles], [services, [test-service, second-test-service]]], [locations, [test-location]]]
+- article:
+    source: tests/data/article.yaml
+    data: [[title, Test article in test section], [app_config, test-articles], [services, [last-test-service]]], [categories, 'test-category']]
+- event_section:
+    data: [[app_title, Test events]]
+- page:
+    data: [[title, Test events], [apphook, EventsApp], [apphook_namespace, test-events]]
+- event:
+    source: tests/data/event.yaml
+- event:
+    source: tests/data/event.yaml
+    data: [[title, Second test event ], [app_config, test-events], [services, [test-service, second-test-service]]], [categories, 'test-category']]
+- event:
+    source: tests/data/event.yaml
+    data: [[title, Test event in test section], [app_config, test-events], [services, [last-test-service]], [locations, [test-location]]]
+
+#- page:
+    #source: tests/data/page.yaml
+#- page:
+    #source: tests/data/page.yaml
+    #data: [slug, test2]
+#- page:
+    #source: tests/data/page.yaml
+    #data: [slug, test33]
+
+
+#Add new:
+#- Company
+#- Location
+#- Category
+#- Service
+  #- Sections
+#- Person
+#- Group
+#- Article
+  #- Section
+#- Event
+  #- Section
+  #- Speaker
+
+#CMS Page
+#- Check templates
+#- Check advanced settings
+#For each:
+#- Create a published page and check the sidebar placeholders
+#- Try adding basic content
+
+#Key plugins:
+#- Text
+#- Related articles
+#- Specific articles
+#- Related people
+#- Related events
+#- Related speakers
+#- Related services
+#- Forms - Check delivery and to API
+
+#For each:
+#Check different types of categorisation
+
+#Check:
+#Top-level People page
+#Top-level Service page
+#Article and Event listings
+#Search results
+#Content-rich CMS sections - About/Careers etc.
+#Delete:
+#CMS Page
+#Event
+#Section
+#Speaker
+#Article
+#Section
+#Person
+#Group
+#Service
+#Sections
+#Category
+#Location
+#Company
+

@@ -1,0 +1,9 @@
+---
+title: Test Page
+publish: true
+
+placeholders:
+  content:
+    - TextPlugin:
+        body: $loremipsum
+

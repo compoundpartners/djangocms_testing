@@ -1,0 +1,9 @@
+---
+- location:
+    source: tests/data/location.yaml
+- location:
+    source: tests/data/location.yaml
+    data: [[name, Second test location ]]
+- location:
+    source: tests/data/location.yaml
+    data: [[name, Last test location]]

@@ -1,0 +1,19 @@
+---
+- speaker:
+    data: [[name, John Doe]]
+- speaker:
+    data: [[name, Joe]]
+- speaker:
+    data: [[name, John Smith]]
+- event_section:
+    data: [[app_title, Test events]]
+- page:
+    data: [[title, Test events], [apphook, EventsApp], [apphook_namespace, test-events]]
+- event:
+    source: tests/data/event.yaml
+- event:
+    source: tests/data/event.yaml
+    data: [[title, Second test event ], [app_config, test-events], [host, joe-joe], [services, [test-service, second-test-service]]]
+- event:
+    source: tests/data/event.yaml
+    data: [[title, Last test event], [app_config, test-events], [host, john-smith], [services, [last-test-service]], [locations, [second-test-location]]]

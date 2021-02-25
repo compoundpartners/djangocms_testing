@@ -1,0 +1,13 @@
+---
+- group:
+    data: [[name, Test group]]
+- group:
+    data: [[name, Second test group]]
+- person:
+    source: tests/data/person.yaml
+- person:
+    source: tests/data/person.yaml
+    data: [[name, Joe], [groups, [second-test-group]], [services, [test-service, second-test-service]], [location, last-test-location]]
+- person:
+    source: tests/data/person.yaml
+    data: [[name, John Smith], [groups, [test-group]], [services, [last-test-service]], [location, second-test-location]]
