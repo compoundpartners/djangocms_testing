@@ -13,7 +13,7 @@
     source: tests/data/event.yaml
 - event:
     source: tests/data/event.yaml
-    data: [[title, Second test event ], [app_config, test-events], [host, joe-joe], [services, [test-service, second-test-service]]]
+    data: [[title, Second test event ], [app_config, test-events], [host, joe-joe], [services, [test-service, second-test-service]], [categories, [first-test-category]]]
 - event:
     source: tests/data/event.yaml
-    data: [[title, Last test event], [app_config, test-events], [host, john-smith], [services, [last-test-service]], [locations, [second-test-location]]]
+    data: [[title, Last test event], [app_config, test-events], [host, john-smith], [services, [last-test-service]], [locations, [second-test-location]], [categories, [first-test-category, second-test-category]]]

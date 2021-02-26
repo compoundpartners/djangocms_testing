@@ -3,6 +3,9 @@ from aldryn_newsblog.models import Article, NewsBlogConfig
 from django.utils.text import slugify
 from js_services.models import Service
 from js_locations.models import Location
+from aldryn_categories.models import Category
+from aldryn_people.models import Person
+
 
 class Command(PageCommand):
     help = 'Creates a Article with a .yaml template.'
@@ -49,6 +52,15 @@ class Command(PageCommand):
             data['services'] = Service.objects.filter(translations__slug__in=data['services'])
         if 'locations' in data:
             data['locations'] = Location.objects.filter(translations__slug__in=data['locations'])
+        if 'categories' in data:
+            data['categories'] = Category.objects.filter(translations__slug__in=data['categories'])
+        if 'author' in data:
+            author = Person.objects.get(translations__slug=data['author'])
+            data['author'] = author
+            data['author_trans'] = author
+        if 'is_published' in data:
+            data['is_published_trans'] = data['is_published']
+
         return True, 'All OK'
 
     def _get_queryset(self, **kwargs):

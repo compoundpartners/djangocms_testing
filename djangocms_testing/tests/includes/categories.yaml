@@ -1,0 +1,9 @@
+---
+- category:
+    source: tests/data/category.yaml
+- category:
+    source: tests/data/category.yaml
+    data: [[name, Second test category ]]
+- category:
+    source: tests/data/category.yaml
+    data: [[name, Last test category]]

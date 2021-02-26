@@ -1,8 +1,8 @@
 ---
 - service_section:
-    data: [[app_title, Test services]]
+    data: [[app_title, Test section], [namespace, test-services]]
 - service_section:
-    data: [[app_title, Second test services]]
+    data: [[app_title, Second test section], [namespace, second-test-services]]
 - page:
     data: [[title, Test services], [apphook, ServicesApp], [apphook_namespace, test-services]]
 - page:
@@ -12,7 +12,7 @@
     data: [[title, Test service], [sections, [test-services, second-test-services]]]
 - service:
     source: tests/data/service.yaml
-    data: [[title, Second test service], [sections, [test-services]]]
+    data: [[title, Second test service], [sections, [test-services]], [categories, [second-test-category]]]
 - service:
     source: tests/data/service.yaml
-    data: [[title, Last test service], [sections, [second-test-services]]]
+    data: [[title, Last test service], [sections, [second-test-services]], [categories, [first-test-category, last-test-category]]]

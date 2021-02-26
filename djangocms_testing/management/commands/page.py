@@ -15,7 +15,7 @@ from django.utils.text import slugify
 from aldryn_people.models import Group, Person
 from aldryn_newsblog.models import NewsBlogConfig
 from js_events.models import EventsConfig, Event, Speaker
-from js_services.models import Service
+from js_services.models import Service, ServicesConfig
 
 from djangocms_testing import conf
 
@@ -192,6 +192,7 @@ class PageCommand(BaseCommand):
         """
         return {
             '$loremipsum': '<p>{0}</p>'.format(loremipsum),
+            '$service_sections': lambda x: ServicesConfig.objects.filter(namespace__in=x),
             '$service': lambda x: Service.objects.get(translations__slug=x),
             '$services': lambda x: Service.objects.filter(translations__slug__in=x),
             '$person': lambda x: Person.objects.get(translations__slug=x),

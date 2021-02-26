@@ -3,6 +3,9 @@
     source: tests/includes/locations.yaml
     dont_check_url: True
 - script:
+    source: tests/includes/categories.yaml
+    dont_check_url: True
+- script:
     source: tests/includes/services.yaml
 - script:
     source: tests/includes/people.yaml

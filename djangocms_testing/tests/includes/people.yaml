@@ -7,7 +7,7 @@
     source: tests/data/person.yaml
 - person:
     source: tests/data/person.yaml
-    data: [[name, Joe], [groups, [second-test-group]], [services, [test-service, second-test-service]], [location, last-test-location]]
+    data: [[name, Joe], [groups, [second-test-group]], [services, [test-service, second-test-service]], [location, last-test-location], [categories, [second-test-category]]]
 - person:
     source: tests/data/person.yaml
-    data: [[name, John Smith], [groups, [test-group]], [services, [last-test-service]], [location, second-test-location]]
+    data: [[name, John Smith], [groups, [test-group]], [services, [last-test-service]], [location, second-test-location], [categories, [second-test-category, last-test-category]]]

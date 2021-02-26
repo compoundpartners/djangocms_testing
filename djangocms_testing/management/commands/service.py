@@ -1,6 +1,7 @@
 from .page import PageCommand
 from js_services.models import Service, ServicesConfig
 from django.utils.text import slugify
+from aldryn_categories.models import Category
 
 class Command(PageCommand):
     help = 'Creates a Service with a .yaml template.'
@@ -15,7 +16,7 @@ class Command(PageCommand):
         data_m2m = {}
         keys = list(data.keys())
         for field in keys:
-            if field in ['sections']:
+            if field in ['sections', 'categories']:
                 data_m2m[field] = data[field]
                 del data[field]
         return data, data_m2m
@@ -39,8 +40,12 @@ class Command(PageCommand):
                 return False, 'Value for "{field}" is missing.'.format(field=f)
         if 'sections' in data:
             data['sections'] = ServicesConfig.objects.filter(namespace__in=data['sections'])
+        if 'categories' in data:
+            data['categories'] = Category.objects.filter(translations__slug__in=data['categories'])
         if not 'slug' in data:
             data['slug'] = slugify(data['title'])
+        if 'is_published' in data:
+            data['is_published_trans'] = data['is_published']
         return True, 'All OK'
 
     def _get_queryset(self, **kwargs):

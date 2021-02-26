@@ -7,7 +7,7 @@
     source: tests/data/article.yaml
 - article:
     source: tests/data/article.yaml
-    data: [[title, Second test article ], [app_config, test-articles], [services, [test-service, second-test-service]], [locations, [test-location]]]
+    data: [[title, Second test article ], [app_config, test-articles], [author, joe-joe], [services, [test-service, second-test-service]], [locations, [test-location]], [categories, [last-test-category]]]
 - article:
     source: tests/data/article.yaml
-    data: [[title, Test article in test section], [app_config, test-articles], [services, [last-test-service]]]
+    data: [[title, Test article in test section], [app_config, test-articles], [services, [last-test-service]], [categories, [first-test-category, last-test-category]]]

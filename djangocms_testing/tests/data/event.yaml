@@ -11,7 +11,7 @@ placeholders:
     - TextPlugin:
         body: $loremipsum
     - RelatedSpeakersPlugin:
-        title: Speackers
+        title: Speakers
         number_of_people: 3
         speakers:
             $speakers: [john-doe, joe-joe, john-smith]

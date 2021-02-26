@@ -7,14 +7,23 @@ placeholders:
     - TextPlugin:
         body: $loremipsum
 
+    - RelatedServicesPlugin:
+        title: Related Servicices
+        count: 3
+        related_services:
+            $services: [test-service, last-test-service]
+
+    - RelatedServicesPlugin:
+        title: Related Servicices 2
+        count: 3
+        related_sections:
+            $service_sections: [test-services]
+
     - RelatedPeoplePlugin:
         title: Test Group
         number_of_people: 3
         related_groups:
             $groups: [test-group]
-
-    - TextPlugin:
-        body: $loremipsum
 
     - RelatedPeoplePlugin:
         title: Some Test People
@@ -23,7 +32,7 @@ placeholders:
             $people: [john-smith, joe-joe]
 
     - RelatedSpeakersPlugin:
-        title: Speackers
+        title: Speakers
         number_of_people: 3
         speakers:
             $speakers: [john-doe, john-smith]

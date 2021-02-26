@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 from setuptools import find_packages, setup
+from djangocms_testing import __version__
 
 long_description = open('README.md').read()
 
 setup(
     name='djangocms_testing',
-    version='0.1',
+    version=__version__,
     description='Testing utilities for Django CMS',
     long_description=long_description,
     long_description_content_type='text/markdown',

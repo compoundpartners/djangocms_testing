@@ -3,6 +3,7 @@ from .page import PageCommand
 from aldryn_people.models import Person, Group
 from js_services.models import Service
 from js_locations.models import Location
+from aldryn_categories.models import Category
 
 class Command(PageCommand):
     help = 'Creates a Person with a .yaml template.'
@@ -17,7 +18,7 @@ class Command(PageCommand):
         data_m2m = {}
         keys = list(data.keys())
         for field in keys:
-            if field in ['groups', 'services']:
+            if field in ['groups', 'categories', 'services']:
                 data_m2m[field] = data[field]
                 del data[field]
         return data, data_m2m
@@ -55,6 +56,8 @@ class Command(PageCommand):
             data['services'] = Service.objects.filter(translations__slug__in=data['services'])
         if 'location' in data:
             data['location'] = Location.objects.filter(translations__slug=data['location']).first()
+        if 'categories' in data:
+            data['categories'] = Category.objects.filter(translations__slug__in=data['categories'])
         return True, 'All OK'
 
     def _get_queryset(self, **kwargs):

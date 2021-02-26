@@ -1,0 +1,6 @@
+{
+    "package-name": "js-testing",
+    "installed-apps": [
+        "djangocms_testing"
+    ]
+}
