@@ -5,7 +5,7 @@ from djangocms_testing import __version__
 long_description = open('README.md').read()
 
 setup(
-    name='djangocms_testing',
+    name='js-testing',
     version=__version__,
     description='Testing utilities for Django CMS',
     long_description=long_description,
